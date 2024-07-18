@@ -141,7 +141,7 @@ $.Autocompleter = function(input, options) {
 				break;
 
 			// matches also semicolon
-			case options.multiple && $.trim(options.multipleSeparator) == "," && KEY.COMMA:
+			case options.multiple && options.multipleSeparator.trim() == "," && KEY.COMMA:
 			case KEY.TAB:
 			case KEY.RETURN:
 				if( selectCurrent() ) {
@@ -281,9 +281,9 @@ $.Autocompleter = function(input, options) {
 		if (!value)
 			return [""];
 		if (!options.multiple)
-			return [$.trim(value)];
+			return [value.trim()];
 		return $.map(value.split(options.multipleSeparator), function(word) {
-			return $.trim(value).length ? $.trim(word) : null;
+			return value.trim().length ? word.trim() : null;
 		});
 	}
 
@@ -413,7 +413,7 @@ $.Autocompleter = function(input, options) {
 		var parsed = [];
 		var rows = data.split("\n");
 		for (var i=0; i < rows.length; i++) {
-			var row = $.trim(rows[i]);
+			var row = rows[i].trim();
 			if (row) {
 				row = row.split("|");
 				parsed[parsed.length] = {
