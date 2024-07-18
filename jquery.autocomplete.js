@@ -1,5 +1,5 @@
 /*
- * jQuery Autocomplete plugin 1.2.3
+ * jQuery Autocomplete plugin 1.2.4
  *
  * Copyright (c) 2009 Jörn Zaefferer
  *
@@ -367,7 +367,7 @@ $.Autocompleter = function(input, options) {
 				success(term, data);
 			}
 			else{
-				var parsed = options.parse && options.parse(options.noRecord) || parse(options.noRecord);	
+				var parsed = options.parse && options.parse(options.noRecord) || parse(options.noRecord);
 				success(term,parsed);
 			}
 		// if an AJAX url has been supplied, try loading the data now

@@ -1,3 +1,8 @@
+1.2.4 --jools-r
+---
+* Correct deprecated jQuery.trim(foo) to foo.trim().
+  Still working with jQuery 3 + 4 beta
+
 1.2.2 --AGA
 ---
 *Merged agmcleaod's fork: Added failure to the options hash: `failure`
